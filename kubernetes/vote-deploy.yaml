@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: vote
-        image: roxsross12/votingapp:1.0.0-vote
+        image: REGISTRY/vote:TAG
         ports:
         - containerPort: 80
