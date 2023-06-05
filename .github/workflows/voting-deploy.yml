@@ -23,18 +23,18 @@ jobs:
       - name: VOTE APP
         run: |
           cd vote
-          docker build -t $REGISTRY/VOTE:$SHORT_SHA .
-          docker push $REGISTRY/VOTE:$SHORT_SHA
+          docker build -t $REGISTRY/vote:$SHORT_SHA .
+          docker push $REGISTRY/vote:$SHORT_SHA
       - name: RESULT APP
         run: |
           cd result
-          docker build -t $REGISTRY/RESULT:$SHORT_SHA .
-          docker push $REGISTRY/RESULT:$SHORT_SHA
+          docker build -t $REGISTRY/result:$SHORT_SHA .
+          docker push $REGISTRY/result:$SHORT_SHA
       - name: WORKER APP
         run: |
           cd worker
-          docker build -t $REGISTRY/WORKER:$SHORT_SHA .
-          docker push $REGISTRY/WORKER:$SHORT_SHA
+          docker build -t $REGISTRY/worker:$SHORT_SHA .
+          docker push $REGISTRY/worker:$SHORT_SHA
   # deploy:
   #   runs-on: ubuntu-latest
   #   env:
