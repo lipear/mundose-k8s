@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: worker
-        image: roxsross12/votingapp:1.0.0-worker
+        image: roxsross12/worker:TAG

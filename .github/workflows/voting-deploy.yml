@@ -72,6 +72,20 @@ jobs:
       - name: UPDATE IMAGE VOTE
         run: |
            cd kubernetes
-           sed -i "s/REGISTRY/$REGISTRY/g" vote-deploy.yaml
            sed -i "s/TAG/$SHORT_SHA/g" vote-deploy.yaml
            cat vote-deploy.yaml
+      - name: UPDATE IMAGE RESULT
+        run: |
+           cd kubernetes
+           sed -i "s/TAG/$SHORT_SHA/g" result-deploy.yaml
+           cat result-deploy.yaml           
+      - name: UPDATE IMAGE WORKER
+        run: |
+           cd kubernetes
+           sed -i "s/TAG/$SHORT_SHA/g" worker-deploy.yaml
+           cat worker-deploy.yaml   
+
+      - name: DEPLOY 
+        run: |
+          cd kubernetes
+          kubectl apply -f . -n ${{ env.namespaces }}               
