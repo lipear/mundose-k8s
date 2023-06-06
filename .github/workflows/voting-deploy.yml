@@ -6,7 +6,7 @@ on:
 
   workflow_dispatch:
 env:
-  REGISTRY: roxsross12
+  REGISTRY: fabastante
 
 jobs:
   build:
@@ -41,7 +41,7 @@ jobs:
     needs: build
     env:
       cluster: "test-cluster"
-      namespaces: "rsuarez2"
+      namespaces: "felipe-abastante"
 
     steps:
       - uses: actions/checkout@v3
@@ -89,4 +89,4 @@ jobs:
       - name: DEPLOY 
         run: |
           cd kubernetes
-          kubectl apply -f . -n ${{ env.namespaces }}               
+          kubectl apply -f . -n ${{ env.namespaces }}
