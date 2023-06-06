@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: worker
-        image: roxsross12/worker:TAG
+        image: fabastante/worker:TAG

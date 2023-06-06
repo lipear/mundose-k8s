@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: vote
-        image: roxsross12/vote:TAG
+        image: fabastante/vote:TAG
         ports:
         - containerPort: 80

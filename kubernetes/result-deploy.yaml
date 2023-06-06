@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: result
-        image: roxsross12/result:TAG
+        image: fabastante/result:TAG
         ports:
         - containerPort: 80
