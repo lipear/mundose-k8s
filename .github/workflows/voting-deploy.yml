@@ -66,8 +66,8 @@ jobs:
       - name: listar nodos
         run: kubectl get nodes -A
 
-      - name: Crear namespaces
-        run: kubectl create ns ${{ env.namespaces }}
+      # - name: Crear namespaces
+      #   run: kubectl create ns ${{ env.namespaces }}
 
       - name: UPDATE IMAGE VOTE
         run: |
