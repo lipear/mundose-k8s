@@ -41,7 +41,7 @@ jobs:
     needs: build
     env:
       cluster: "test-cluster"
-      namespaces: "rsuarez"
+      namespaces: "rsuarez2"
 
     steps:
       - uses: actions/checkout@v3
